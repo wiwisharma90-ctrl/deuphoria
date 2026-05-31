@@ -1,6 +1,6 @@
 
 const supabaseClient = supabase.createClient(
-    'vjytibajskirtnvvvtpf.supabase.co',
+    'https://vjytibajskirtnvvvtpf.supabase.co',
     'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZqeXRpYmFqc2tpcnRudnZ2dHBmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODAyMzg3MzIsImV4cCI6MjA5NTgxNDczMn0.YWXMgZWheyq5VVEOGY4PGiyT_HwWLF1Ld4Zdmph7uAU'
 );
 // 2. إرسال الطلب
