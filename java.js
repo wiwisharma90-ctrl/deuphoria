@@ -24,7 +24,7 @@ async function handleOrderSubmit(event) {
             address: document.getElementById('address').value,
             material: selectedMaterial === 'inox' ? 'Inox' : 'Silver',
             price: price,
-            color: document.querySelector('input[name="product_color"]:checked').value
+
         };
 
         // إرسال
