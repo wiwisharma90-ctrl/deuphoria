@@ -1,0 +1,77 @@
+/* 1. تنسيق الخلفية العامة للموقع */
+body{
+    background: linear-gradient(
+        135deg,
+        #fff0f6 0%,
+        #ffe4ec 50%,
+        #fff8fb 100%
+    );
+}
+
+/* 2. تنسيق نص القصة (الخلفية الرومانسية) */
+.luxury-story-text {
+    font-size: 16px !important;
+    line-height: 1.7 !important;
+    color: #4a2c2c !important;
+    text-align: center;
+    padding: 20px !important;
+    margin: 10px 0 20px 0;
+    /* خلفية ناعمة جداً تبرز النص */
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.7) 50%, rgba(255, 255, 255, 0) 100%) !important;
+    border-top: 1px solid rgba(184, 134, 11, 0.3) !important;
+    border-bottom: 1px solid rgba(184, 134, 11, 0.3) !important;
+    font-weight: 400;
+}
+/* 3. تنسيق حاوية الفيديو */
+.video-container {
+    width: 90%;          
+    max-width: 400px;    
+    margin: 20px auto;   
+    border-radius: 20px; 
+    overflow: hidden;    
+    border: 4px solid #dfb15b; 
+    box-shadow: 0 10px 25px rgba(223, 177, 91, 0.2); /* ظل ذهبي خفيف */
+    aspect-ratio: 9 / 16; 
+}
+
+/* 4. تنسيق الفيديو نفسه */
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+    background-color: #fffaf0; /* لون كريمي هادئ */
+    display: block;
+}
+
+/* 5. تنسيق نافذة النجاح (رومانسية) */
+.success-modal-content {
+    background-color: #ffffff;
+    border: 2px solid #f48fb1; 
+    border-radius: 20px; 
+    box-shadow: 0 4px 15px rgba(244, 143, 177, 0.3); 
+    padding: 20px;
+    text-align: center;
+}
+
+/* إضافة اختيارية: لجعل أي عنوان (h1, h2) يلمع بذهبية */
+h1, h2 {
+    color: #b8860b;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+}
+
+.faq-content {
+    transition: max-height 0.4s ease, padding 0.3s ease;
+}
+
+.faq-item.active .faq-content {
+    padding-bottom: 12px;
+}
+
+
+.faq-trigger::after {
+    transition: transform 0.4s ease;
+}
+
+.faq-item.active .faq-trigger::after {
+    transform: rotate(180deg);
+}

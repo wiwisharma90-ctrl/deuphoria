@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مجموعة تجربة اللؤلؤ الساحرة</title>
+    <link rel="stylesheet" href="new_style.css"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700;900&display=swap" rel="stylesheet">
+    
+
+    <style>
+ :root{
+  --bg-dark-blue: #fff7fb;
+  --bg-card: #ffffff;
+  --gold-primary: #e89ab3;
+  --gold-glow: rgba(232,154,179,.35);
+
+  --text-light: #5e3d47;
+  --text-muted: #8b6b75;
+}
+
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Cairo', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-dark-blue);
+            color: var(--text-light);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+        }
+
+        .phone-container {
+            width: 100%;
+            max-width: 480px;
+            background-color: var(--bg-dark-blue);
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+            position: relative;
+            overflow-x: hidden;
+            padding-bottom: 50px;
+        }
+
+        .promo-bar {
+            background-color: #010614;
+            color: var(--gold-primary);
+            text-align: center;
+            padding: 12px 15px;
+            font-size: 13px;
+            font-weight: 700;
+            border-bottom: 1px solid rgba(223, 177, 91, 0.2);
+        }
+
+        section {
+            padding: 35px 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+        }
+
+        .hero-section {
+            text-align: center;
+            padding-top: 25px;
+        }
+
+        .main-title {
+            font-size: 24px;
+            font-weight: 900;
+            line-height: 1.4;
+            color: #5e3d47;
+            margin-bottom: 20px;
+        }
+
+        .main-title span {
+            color: var(--gold-primary);
+            display: block;
+            font-size: 18px;
+            font-weight: 400;
+            margin-top: 8px;
+        }
+
+        .product-3d-image {
+            width: 100%;
+            height: auto;
+            max-height: 320px;
+            object-fit: contain;
+            margin: 20px 0;
+            filter: drop-shadow(0 10px 25px rgba(0,0,0,0.6));
+        }
+
+       
+        .luxury-story-text {
+            font-size: 15px;
+            line-height: 1.7;
+            color: var(--text-light);
+            text-align: center;
+            padding: 18px 12px;
+            margin: 10px 0 20px 0;
+            background: linear-gradient(90deg, rgba(8, 21, 51, 0) 0%, rgba(8, 21, 51, 0.6) 50%, rgba(8, 21, 51, 0) 100%);
+            border-top: 1px solid rgba(223, 177, 91, 0.15);
+            border-bottom: 1px solid rgba(223, 177, 91, 0.15);
+            font-weight: 400;
+        }
+
+        .cta-button {
+            display: block;
+            width: 100%;
+            background: linear-gradient(135deg, #ff8fb1 0%, #f06292 100%);
+            color: white;
+            text-align: center;
+            padding: 18px;
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: 700;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 15px var(--gold-glow);
+            animation: buttonPulse 2s infinite ease-in-out;
+            transition: all 0.3s ease;
+            margin: 20px 0;
+        }
+
+        .cta-button::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -60%;
+            width: 30%;
+            height: 200%;
+            background: linear-gradient(
+                to right, 
+                rgba(255, 255, 255, 0) 0%, 
+                rgba(255, 255, 255, 0.6) 50%, 
+                rgba(255, 255, 255, 0) 100%
+            );
+            transform: rotate(25deg);
+            animation: shineSweep 3.5s infinite ease-in-out;
+        }
+
+        .cta-button:active {
+            transform: scale(0.97);
+        }
+
+        .features-list {
+            list-style: none;
+            color: #ffffff;
+            margin-top: 15px;
+        }
+
+        .features-list li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 14px;
+            font-size: 15px;
+            background: rgba(8, 21, 51, 0.6);
+            padding: 14px 15px;
+            border-radius: 10px;
+            border-right: 3px solid var(--gold-primary);
+        }
+
+        .features-list li .icon {
+            color: #ffffff;
+            margin-left: 12px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .lifestyle-block {
+            text-align: center;
+        }
+
+        .lifestyle-img {
+            width: 100%;
+            border-radius: 15px;
+            border: 1px solid rgba(223, 177, 91, 0.15);
+            margin: 15px 0;
+        }
+
+        .price-banner {
+            background: linear-gradient(180deg, var(--bg-card) 0%, rgba(8,21,51,0.4) 100%);
+            border: 1px solid rgba(223, 177, 91, 0.2);
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .price-title {
+            font-size: 15px;
+            color: var(--text-muted);
+            margin-bottom: 5px;
+        }
+
+        .price-amount {
+            font-size: 38px;
+            font-weight: 900;
+            color: var(--gold-primary);
+        }
+
+        .price-amount span {
+            font-size: 20px;
+            font-weight: 400;
+            color: var(--text-light);
+            margin-right: 5px;
+        }
+
+        .shipping-badge {
+            display: inline-block;
+            background-color: rgba(16, 185, 129, 0.2);
+            color: #10b981;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            margin-top: 8px;
+        }
+
+        .stock-bar-container {
+            background-color: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            height: 8px;
+            width: 100%;
+            margin: 15px 0 5px 0;
+            overflow: hidden;
+        }
+
+        .order-form-box {
+            background-color: var(--bg-card);
+            border: 2px solid var(--gold-primary);
+            border-radius: 15px;
+            padding: 25px 20px;
+            margin-top: 25px;
+        }
+
+        .form-title {
+            text-align: center;
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #5e3d47;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        .form-control {
+            width: 100%;
+            background-color: var(--bg-dark-blue);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 8px;
+            padding: 14px;
+            color: #5e3d47;
+            font-size: 15px;
+            transition: border-color 0.3s;
+        }
+
+        select.form-control {
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23dfb15b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'></polyline></svg>");
+            background-repeat: no-repeat;
+            background-position: left 12px center;
+            background-size: 16px;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--gold-primary);
+        }
+
+        .radio-tile-group {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+
+        .color-grid {
+            grid-template-columns: repeat(4, 1fr) !important;
+        }
+
+        .radio-tile-label {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .radio-tile-label input {
+            position: absolute;
+            opacity: 0;
+        }
+
+        .radio-tile-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 12px;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 8px;
+            background-color: var(--bg-dark-blue);
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .radio-tile-label input:checked + .radio-tile-content {
+            border-color: var(--gold-primary);
+            background-color: rgba(223, 177, 91, 0.08);
+            color: var(--gold-primary);
+            font-weight: bold;
+        }
+
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(1, 6, 20, 0.85);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.4s ease;
+            padding: 20px;
+        }
+
+        .modal-overlay.open {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .success-modal {
+            background-color: var(--bg-card);
+            border: 2px solid var(--gold-primary);
+            border-radius: 20px;
+            width: 100%;
+            max-width: 400px;
+            padding: 35px 25px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.7);
+            transform: translateY(30px);
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .modal-overlay.open .success-modal {
+            transform: translateY(0);
+        }
+
+        .success-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #dfb15b 0%, #b38936 100%);
+            color: #030b1e;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 35px;
+            margin: 0 auto 20px auto;
+            box-shadow: 0 0 20px var(--gold-glow);
+        }
+
+        .modal-title {
+            font-size: 22px;
+            font-weight: 900;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+
+        .modal-text {
+            font-size: 15px;
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .close-modal-btn {
+            background: transparent;
+            border: 1px solid var(--gold-primary);
+            color: var(--gold-primary);
+            padding: 10px 25px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+   
+        .faq-item{
+            background-color: linear-gradient(135deg, #fff0f6 0%, #ffdce8 100%);
+            border: 1px solid #f3bfd2;
+            border-radius: 14px;
+            margin-bottom: 12px;
+            overflow: hidden;
+
+        }
+
+        .close-modal-btn:hover {
+            background-color: var(--gold-primary);
+            color: #030b1e;
+        }
+
+        .faq-title-main {
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 25px;
+            color: var(--gold-primary);
+            font-weight: 900;
+
+        }
+
+        .faq-trigger {
+            width: 100%;
+            background: none;
+            border: none;
+            padding: 16px;
+            text-align: right;
+            color: #9b4d6d;
+            font-size: 15px;
+            font-weight: 700;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .faq-trigger::after {
+            content: '▼';
+            font-size: 11px;
+            color: var(--gold-primary);
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-trigger::after {
+            transform: rotate(180deg);
+        }
+
+        .faq-content {
+         max-height: 140px;
+        overflow: hidden;
+        opacity: 0;
+        padding: 0 16px;
+        transition: max-height 0.5s ease, opacity 0.3s ease, padding 0.3s ease;
+        color: #030b1e;
+        font-size: 14px;
+        line-height: 1.6;
+        }
+
+        .faq-item.active .faq-content {
+            opacity: 1;
+            padding: 10px 16px 16px 16px;
+        }
+
+        @keyframes buttonPulse {
+            0% { box-shadow: 0 0 12px rgba(223, 177, 91, 0.3); transform: scale(1); }
+            50% { box-shadow: 0 0 25px rgba(223, 177, 91, 0.6); transform: scale(1.02); }
+            100% { box-shadow: 0 0 12px rgba(223, 177, 91, 0.3); transform: scale(1); }
+        }
+
+        @keyframes shineSweep {
+            0% { left: -60%; }
+            30% { left: 140%; }
+            100% { left: 140%; }
+        }
+    </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+
+<div class="phone-container">
+
+    <div class="promo-bar">
+        🇩🇿 عروض الموسم الحصرية متوفرة الآن في الجزائر - شحن سريع %
+    </div>
+
+    <section class="hero-section">
+        <h1 class="main-title">
+            اكتشف سر وسحر اللؤلؤ الطبيعي المخبأ
+            <span>تجربة رومانسية ساحرة لا تُنسى لكما 💖</span>
+        </h1>
+
+        <img src="Capture d’écran 2026-05-30 à 9.33.56 PM.png" alt="طقم اللؤلؤ الفاخر" class="product-3d-image">
+
+        <div class="luxury-story-text">
+            كل قصة حب تستحق لحظة استثنائية تُحفر في الذاكرة.. خلف هذه المحارة الغامضة، تقبع لؤلؤة طبيعية فريدة لم تلمسها يد من قبل، تشكلت في أعماق البحار لتبوح بسرها لكما وحدهما. افتحا المحارة معاً، اكتشفا لون أمنيتكما، وتوّجا تلك اللحظة بقلادة تحفظ مشاعركم الخالدة قريباً من القلب. إنها ليست مجرد هدية، بل تجربة عاطفية فاخرة تعيش لمرة واحدة في العمر.
+        </div>
+
+        <a href="#order-form-section" class="cta-button">اطلب تجربة اللؤلؤ الفريدة الآن</a>
+    </section>
+
+<video 
+    autoplay 
+    loop 
+    muted 
+    playsinline 
+    style="width: 300px; height: 500px; display: block; margin: 20px auto; border: 4px solid #dfb15b; border-radius: 20px; object-fit: cover; background-color: #030b1e;">
+    <source src="a4c8d32a6ce3404e6fa99fd8e1532dff (1).mp4" type="video/mp4">
+</video>
+
+
+
+
+        
+        <ul class="features-list">
+            <li><span class="icon">✓</span> تجربة حية لفتح محارة طبيعية حقيقية بنفسك.</li>
+            <li><span class="icon">✓</span> قلادة فاخرة مصممة لحفظ اللؤلؤة قريباً من القلب.</li>
+            <li><span class="icon">✓</span> هدية مثالية للكابلز تجمع بين الفخامة والتشويق العاطفي.</li>
+            <li><span class="icon">✓</span> جودة اللؤلؤ الطبيعي المضمونة مع طيف الأمنيات الساحر.</li>
+            <li><span class="icon">✓</span> اسي  ضمان نتاع عام و عن تجربة و نزيدوك معاها اومبلاج شباب و رسالة رومنسية.</li>
+        </ul>
+    </section>
+
+    <section class="lifestyle-block">
+        <h2 style="font-size: 18px; color: var(--gold-primary); margin-bottom: 15px; text-align: center;">عبر عن حبك الخالد بهدية استثنائية</h2>
+        <img src="Wish Pearl.jpeg" alt="لحظة إهداء رومانسية" class="lifestyle-img">
+    </section>
+
+    <section id="order-form-section">
+        <div class="price-banner">
+            <div class="price-title">عرض حصري لفترة محدودة جداً</div>
+            <div class="price-amount" id="dynamic-price">2700 <span>DA</span></div>
+            <span class="shipping-badge">توصيل  سريع 🚚</span>
+            <div style="font-size: 13px; color: #f43f5e; font-weight: bold; margin-top: 15px;">
+                ⚠️ عاجل: متبقي 7 قطع فقط في المخزون الحالي!
+            </div>
+            <div class="stock-bar-container">
+                <div style="background: linear-gradient(90deg, #e11d48 0%, #f43f5e 100%); height: 100%; width: 14%;"></div>
+            </div>
+        </div>
+
+        <div class="order-form-box">
+            <div class="form-title">📋 يرجى ملء الاستمارة أدناه لتأكيد طلبك</div>
+            <form id="pearlOrderForm" onsubmit="handleOrderSubmit(event)">
+                
+                <div class="form-group">
+                    <label>الاسم واللقب: <span style="color:#f43f5e">*</span></label>
+                    <input id="name" type="text" class="form-control" placeholder="أدخل اسمك ولقبك الكامل" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>رقم الهاتف: <span style="color:#f43f5e">*</span></label>
+                    <input id="phone" type="tel" class="form-control" placeholder="أدخل رقم هاتفك لتأكيد الطلب" required>
+                </div>
+
+                <div class="form-group">
+                    <label>الولاية (58 ولاية): <span style="color:#f43f5e">*</span></label>
+                    <select id="wilaya" class="form-control" required>
+                        <option value="" disabled selected>اختر ولايتك</option>
+                        <option value="1">01 - أدرار</option>
+                        <option value="2">02 - الشلف</option>
+                        <option value="3">03 - الأغواط</option>
+                        <option value="4">04 - أم البواقي</option>
+                        <option value="5">05 - باتنة</option>
+                        <option value="6">06 - بجاية</option>
+                        <option value="7">07 - بسكرة</option>
+                        <option value="8">08 - بشار</option>
+                        <option value="9">09 - البليدة</option>
+                        <option value="10">10 - البويرة</option>
+                        <option value="11">11 - تمنراست</option>
+                        <option value="12">12 - تبسة</option>
+                        <option value="13">13 - تلمسان</option>
+                        <option value="14">14 - تيارت</option>
+                        <option value="15">15 - تيزي وزو</option>
+                        <option value="16">16 - الجزائر</option>
+                        <option value="17">17 - الجلفة</option>
+                        <option value="18">18 - جيجل</option>
+                        <option value="19">19 - سطيف</option>
+                        <option value="20">20 - سعيدة</option>
+                        <option value="21">21 - سكيكدة</option>
+                        <option value="22">22 - سيدي بلعباس</option>
+                        <option value="23">23 - عنابة</option>
+                        <option value="24">24 - قالمة</option>
+                        <option value="25">25 - قسنطينة</option>
+                        <option value="26">26 - المدية</option>
+                        <option value="27">27 - مستغانم</option>
+                        <option value="28">28 - المسيلة</option>
+                        <option value="29">29 - معسكر</option>
+                        <option value="30">30 - ورقلة</option>
+                        <option value="31">31 - وهران</option>
+                        <option value="32">32 - البيض</option>
+                        <option value="33">33 - إليزي</option>
+                        <option value="34">34 - برج بوعريريج</option>
+                        <option value="35">35 - بومرداس</option>
+                        <option value="36">36 - الطارف</option>
+                        <option value="37">37 - تندوف</option>
+                        <option value="38">38 - تيسمسيلت</option>
+                        <option value="39">39 - الوادي</option>
+                        <option value="40">40 - خنشلة</option>
+                        <option value="41">41 - سوق أهراس</option>
+                        <option value="42">42 - تيبازة</option>
+                        <option value="43">43 - ميلة</option>
+                        <option value="44">44 - عين الدفلى</option>
+                        <option value="45">45 - النعامة</option>
+                        <option value="46">46 - عين تموشنت</option>
+                        <option value="47">47 - غرداية</option>
+                        <option value="48">48 - غليزان</option>
+                        <option value="49">49 - تيميمون</option>
+                        <option value="50">50 - برج باجي مختار</option>
+                        <option value="51">51 - أولاد جلال</option>
+                        <option value="52">52 - بني عباس</option>
+                        <option value="53">53 - عين صالح</option>
+                        <option value="54">54 - عين قزام</option>
+                        <option value="55">55 - تقرت</option>
+                        <option value="56">56 - جانت</option>
+                        <option value="57">57 - المغير</option>
+                        <option value="58">58 - المنيعة</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>نوع السلسال والخامة:</label>
+                    <div class="radio-tile-group">
+                        <label class="radio-tile-label">
+                            <input type="radio" name="material_type" value="inox" checked onchange="updatePrice(2700)">
+                            <div class="radio-tile-content">
+                                <span>اسيي اينوكسيدابل</span>
+                            </div>
+                        </label>
+                        <label class="radio-tile-label">
+                            <input type="radio" name="material_type" value="silver" onchange="updatePrice(4000)">
+                            <div class="radio-tile-content">
+                                <span>فضة عيار 925 ✨</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+<div class="form-group">
+    <label>العنوان: <span style="color:#f43f5e">*</span></label>
+    <input id="address" type="text" class="form-control" name="address" placeholder="يرجى إدخال اسم البلدية والعنوان التفصيلي" required>
+    <small style="color: #666; font-size: 0.8em;">(يرجى إدخال اسم البلدية والحي أو الشارع بدقة)</small>
+</div>
+
+
+                <div class="form-group">
+                    <label>اختر لون اللؤلؤ :</label>
+                    <div class="radio-tile-group color-grid">
+                        <label class="radio-tile-label">
+                            <input type="radio" name="product_color" value="زهري" checked>
+                            <div class="radio-tile-content" style="padding: 10px 5px;">زهري</div>
+                        </label>
+                        <label class="radio-tile-label">
+                            <input type="radio" name="product_color" value="بنفسجي">
+                            <div class="radio-tile-content" style="padding: 10px 5px;">بنفسجي</div>
+                        </label>
+                        <label class="radio-tile-label">
+                            <input type="radio" name="product_color" value="أحمر">
+                            <div class="radio-tile-content" style="padding: 10px 5px;">أحمر</div>
+                        </label>
+                        <label class="radio-tile-label">
+                            <input type="radio" name="product_color" value="أزرق">
+                            <div class="radio-tile-content" style="padding: 10px 5px;">أزرق</div>
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit" class="cta-button" id="submit-btn" style="margin-bottom: 0;">تأكيد الشراء الفوري بـ 2700 DA 🛒</button>
+            </form>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="faq-title-main">الأسئلة الأكثر شيوعاً</h2>
+        
+        <div class="faq-item">
+            <button class="faq-trigger">كيف نطلب المنتج؟</button>
+            <div class="faq-content">
+                <p>الأمر بسيط جداً؛ اضغط على زر الطلب واملاً معلوماتك الشخصية في الاستمارة أعلاه، وسيتواصل معك فريقنا فوراً عبر الهاتف لتأكيد عنوان التوصيل والوقت المناسب لك.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-trigger">نقدر نرجع المنتج إذا لقيت مشكل؟</button>
+            <div class="faq-content">
+                <p>بالتأكيد! رضاكم هو أولويتنا، ونحن نقدم لك ضماناً كاملاً وشاملاً على المنتج لمدة 180 يوم. إذا واجهت أي مشكلة أو خلل مصنعي، يمكنك استرجاعه أو استبداله مباشرة بدون تعقيدات.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-trigger">يجي مغلف كهدية؟</button>
+            <div class="faq-content">
+                <p>أكيد، الطقم مصمم خصيصاً للمناسبات الرومانسية والإهداء؛ حيث يصلك الطقم بالكامل داخل علبة أنيقة، فاخرة، وجاهزة للتقديم كهدية مباشرة لشريكك لتخطف الأنظار.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-trigger">متى تصلني الهدية؟</button>
+            <div class="faq-content">
+                <p>التوصيل سريع جداً ومجاني 100%! يكون التوصيل خلال 24 ساعة إلى 48 ساعة فقط على حسب منطقتك لضمان وصول هديتك في وقتها المناسب.</p>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<div class="modal-overlay" id="successModal">
+    <div class="success-modal">
+        <div class="success-icon">✓</div>
+        <div class="modal-title">تم تسجيل طلبك بنجاح!</div>
+        <div class="modal-text">
+            شكراً لثقتك بنا وعبرك عن مشاعرك الفاخرة ✨<br>
+            لقد تم استلام معلوماتك، **وراح نتواصل معك فوراً عبر الهاتف** لتأكيد عنوان التوصيل والوقت المناسب لك.
+        </div>
+        <button class="close-modal-btn" onclick="closeModal()">حسناً، فهمت</button>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="java.js"></script>
+
+
+</body>
+</html>
+
+
+
+
+
