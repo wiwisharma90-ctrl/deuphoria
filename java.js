@@ -1,7 +1,7 @@
 
 const supabaseClient = supabase.createClient(
-    'https://zcgzetpftcpstnsbjxlg.supabase.co',
-    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InpjZ3pldHBmdGNwc3Ruc2JqeGxnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODAxNjQ2MTcsImV4cCI6MjA5NTc0MDYxN30.DKhZLQX79NOCll2IhxOZKZZmIGjWh0vff7NhKz10sCk'
+    'vjytibajskirtnvvvtpf.supabase.co',
+    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZqeXRpYmFqc2tpcnRudnZ2dHBmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODAyMzg3MzIsImV4cCI6MjA5NTgxNDczMn0.YWXMgZWheyq5VVEOGY4PGiyT_HwWLF1Ld4Zdmph7uAU'
 );
 // 2. إرسال الطلب
 async function handleOrderSubmit(event) {
