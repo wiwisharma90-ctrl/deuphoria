@@ -22,7 +22,7 @@ async function handleOrderSubmit(event) {
             phone: document.getElementById('phone').value,
             wilaya: document.getElementById('wilaya').value,
             address: document.getElementById('address').value,
-            material: selectedMaterial === 'inox' ? 'Inox' : 'Acier',
+            material: selectedMaterial === 'inox' ? 'Inox' : 'Silver',
             price: price,
             color: document.querySelector('input[name="product_color"]:checked').value
         };
