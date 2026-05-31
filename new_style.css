@@ -76,31 +76,26 @@ h1, h2 {
     transform: rotate(180deg);
 }
 
-.contact-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 10px;
+.contact-section p{
+    text-align:center;
+    font-size:18px;
+    font-weight:700;
+    margin-bottom:10px;
 }
 
-.btn-contact {
-    padding: 10px 20px;
-    border-radius: 50px;
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    transition: 0.3s;
+.btn-contact{
+    padding:10px 22px;
+    border-radius:50px;
+    color:white;
+    text-decoration:none;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    transition:0.3s;
+    font-weight:600;
 }
 
-.whatsapp { background-color: #25d366; }
-.phone { background-color: #007bff; }
-
-.btn-contact:hover {
-    transform: scale(1.05);
-    opacity: 0.9;
+.btn-contact:hover{
+    transform:scale(1.05);
 }
-
 
