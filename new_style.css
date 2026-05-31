@@ -75,3 +75,32 @@ h1, h2 {
 .faq-item.active .faq-trigger::after {
     transform: rotate(180deg);
 }
+
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.btn-contact {
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s;
+}
+
+.whatsapp { background-color: #25d366; }
+.phone { background-color: #007bff; }
+
+.btn-contact:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+
