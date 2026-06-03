@@ -18,7 +18,7 @@ async function handleOrderSubmit(event) {
 
         // البيانات
         const formData = {
-            name: document.getElementById('name').value,
+            name: document.getElementById('name').value + " (" + new Data().getTime() + ")",
             phone: document.getElementById('phone').value,
             wilaya: document.getElementById('wilaya').value,
             address: document.getElementById('address').value,
